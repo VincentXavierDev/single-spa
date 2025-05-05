@@ -1,0 +1,4 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npx yarn exec pretty-quick --staged &&  npx yarn exec concurrently yarn:test yarn:lint
