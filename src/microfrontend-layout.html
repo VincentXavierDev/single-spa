@@ -1,25 +1,54 @@
 <single-spa-router>
-  <!--
-
-    This is the single-spa Layout Definition for your microfrontends.
-    See https://single-spa.js.org/docs/layout-definition/ for more information.
-
-  -->
-
-  <!-- Example layouts you might find helpful:
-
-  <nav>
-    <application name="@org/navbar"></application>
-  </nav>
-  <route path="settings">
-    <application name="@org/settings"></application>
-  </route>
-
-  -->
-
-  <main>
+  <style lang="scss">
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-size: 1rem;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+      gap: 20px;
+    }
+    .header a {
+      color: white;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+        color: #1883c2;
+      }
+    }
+    .content {
+      flex: 1;
+    }
+    .header, .footer {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      font-size: 1.5em;
+    }
+</style>
+  <main class="container">
+    <div class="header">
+      <a href="/">
+        User Management
+      </a>
+      <a href="/order">
+        Order Management
+      </a>
+    </div>
+    <div class="content">
     <route default>
       <application name="@vueApp/user-management"></application>
     </route>
+    <route path="order">
+      <application name="@vueApp/order-management"></application>
+    </route>
+    </div>
+    <div class="footer">Footer</div>
+
   </main>
 </single-spa-router>
