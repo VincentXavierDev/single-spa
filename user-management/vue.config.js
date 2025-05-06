@@ -7,4 +7,7 @@ module.exports = defineConfig({
     },
   },
   transpileDependencies: true,
+  css: {
+    extract: false,
+  },
 });

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c560d294-3ef9-4d93-8d58-e9e7d9664c23" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/order-management/src/assets/tailwind.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-management/src/components/LoadingOverlay.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-management/src/components/UserInfoModal.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-management/src/layout/MainLayout.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-management/src/views/TodoApp.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-management/postcss.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-management/src/assets/tailwind.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-management/src/components/LoadingOverlay.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-management/src/layout/MainLayout.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-management/src/views/SignIn.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-management/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/order-management/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-management/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/order-management/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-management/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-management/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/order-management/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-management/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/order-management/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/root-config/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/root-config/.eslintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/root-config/src/microfrontend-layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/root-config/src/microfrontend-layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-management/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/user-management/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-management/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/user-management/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-management/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-management/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/user-management/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-management/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/user-management/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-management/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/user-management/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2wf2vIt6vJvagXYM3fN3qkC8XvC" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/VNPT-study/single-spa/order-management/src/components&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\VNPT-study\single-spa\order-management\src\components" />
+      <recent name="E:\VNPT-study\single-spa\order-management\src" />
+      <recent name="E:\VNPT-study\single-spa\order-management\src\assets" />
+      <recent name="E:\VNPT-study\single-spa\modules\user-management\src" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.222" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c560d294-3ef9-4d93-8d58-e9e7d9664c23" name="Changes" comment="" />
+      <created>1746418537455</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746418537455</updated>
+      <workItem from="1746418538599" duration="510000" />
+      <workItem from="1746426698928" duration="14147000" />
+      <workItem from="1746441769097" duration="521000" />
+      <workItem from="1746492245214" duration="3128000" />
+      <workItem from="1746498945826" duration="6406000" />
+      <workItem from="1746508906937" duration="17811000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/user-management/vue.config.js</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

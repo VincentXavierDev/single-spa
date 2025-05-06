@@ -9,9 +9,16 @@
     "serve:standalone": "vue-cli-service serve --mode standalone"
   },
   "dependencies": {
+    "@primeuix/themes": "^1.0.3",
+    "autoprefixer": "^10.4.21",
     "core-js": "^3.8.3",
+    "postcss": "^8.5.3",
+    "primevue": "^4.3.3",
     "single-spa-vue": "^2.1.0",
-    "vue": "^3.2.13"
+    "tailwindcss": "3",
+    "tailwindcss-primeui": "^0.6.1",
+    "vue": "^3.2.13",
+    "vue-router": "^4.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

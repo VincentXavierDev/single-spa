@@ -1,5 +1,14 @@
-import { h, createApp } from "vue";
+import {createApp, h} from "vue";
 import singleSpaVue from "single-spa-vue";
+import PrimeVue from 'primevue/config';
+import Aura from '@primeuix/themes/aura';
+import './assets/tailwind.css';
+import Button from 'primevue/button';
+import Toolbar from 'primevue/toolbar';
+import InputText from 'primevue/inputtext'
+import Password from 'primevue/password'
+import Toast from 'primevue/toast'
+import ToastService from 'primevue/toastservice';
 
 import App from "./App.vue";
 
@@ -7,18 +16,22 @@ const vueLifecycles = singleSpaVue({
   createApp,
   appOptions: {
     render() {
-      return h(App, {
-        // single-spa props are available on the "this" object. Forward them to your component as needed.
-        // https://single-spa.js.org/docs/building-applications#lifecycle-props
-        // if you uncomment these, remember to add matching prop definitions for them in your App.vue file.
-        /*
-        name: this.name,
-        mountParcel: this.mountParcel,
-        singleSpa: this.singleSpa,
-        */
-      });
+      return h(App);
     },
   },
+  handleInstance(app) {
+    app.use(PrimeVue, {
+      theme: {
+        preset: Aura
+      }
+    });
+    app.use(ToastService);
+    app.component('VButton', Button);
+    app.component('VToolbar', Toolbar);
+    app.component('VInputText', InputText);
+    app.component('VPassword', Password);
+    app.component('VToast', Toast);
+  }
 });
 
 export const bootstrap = vueLifecycles.bootstrap;
