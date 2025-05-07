@@ -1,7 +1,7 @@
 <template>
   <Dialog v-model:visible="showDialog" header="User" :style="{ width: '1200px' }" :modal="true" :closable="false">
     <VToast />
-    <Form v-slot="$form" :initialValues="initialValues" :resolver="resolver" :validateOnValueUpdate="false" :validateOnBlur="true" @submit="onFormSubmit" class="flex flex-col gap-4 w-full">
+    <Form ref="formRef" v-slot="$form" :resolver="resolver" :validateOnValueUpdate="false" :validateOnBlur="true" @submit="onFormSubmit" class="flex flex-col gap-4 w-full">
       <div class="flex flex-col gap-1">
         <label for="firstName" class="text-sm font-medium text-gray-700">FirstName</label>
         <VInputText :disabled="isDisabled" name="firstName" type="text" placeholder="FirstName" fluid />
@@ -58,6 +58,8 @@ import {useToast} from "primevue/usetoast";
 
 const toast = useToast();
 // eslint-disable-next-line
+const emits = defineEmits(["refresh"]);
+// eslint-disable-next-line
 const showDialog = defineModel()
 // eslint-disable-next-line
 const props = defineProps({
@@ -73,6 +75,7 @@ const props = defineProps({
 const isDisabled = computed(() => props.mode === 'view');
 const isCreate = computed(() => props.mode === 'create');
 const showLoading = ref(false)
+const formRef = ref()
 
 const initialValues = reactive({
   firstName: '',
@@ -83,15 +86,25 @@ const initialValues = reactive({
 });
 
 watch(showDialog , (value) => {
-  if(!value || isCreate.value) return
-  getUserDetail()
+  if(!value) {
+    formRef.value?.reset()
+    return
+  }
+  if (!isCreate.value) getUserDetail()
 })
 
 const getUserDetail = async () => {
   if (!props.userId) return
   const res = await fetch(`https://dummyjson.com/users/${props.userId}`)
   const data = await res.json()
-  Object.assign(initialValues, data)
+  Object.assign(initialValues, {
+    firstName: data.firstName,
+    lastName: data.lastName,
+    gender: data.gender,
+    email: data.email,
+    role: data.role,
+  })
+  formRef.value.setValues(initialValues)
 }
 
 const roleList = ref(['admin', 'moderator'])
@@ -134,7 +147,7 @@ const onFormSubmit = async ({ valid, states }) => {
       body: dataBody
     })
   } else {
-    response = fetch(`https://dummyjson.com/users/${props.userId}`, {
+    response = await fetch(`https://dummyjson.com/users/${props.userId}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: dataBody
@@ -142,11 +155,12 @@ const onFormSubmit = async ({ valid, states }) => {
   }
   showLoading.value = false
   if (response.status !== 200) {
-    toast.add({ severity:'error', summary: 'Error', detail: 'Không thành công!', life: 2000 })
+    toast.add({ severity:'error', summary: 'Lỗi', detail: 'Không thành công!', life: 2000 })
     return
   }
   toast.add({ severity: 'success', summary: 'Thành công', detail: 'Cập nhật thành công!', life: 2000 })
   handleClose()
+  emits('refresh')
 };
 </script>
 

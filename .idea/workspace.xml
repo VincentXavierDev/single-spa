@@ -5,29 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c560d294-3ef9-4d93-8d58-e9e7d9664c23" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/order-management/src/assets/tailwind.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-management/src/components/LoadingOverlay.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-management/src/components/UserInfoModal.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-management/src/layout/MainLayout.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-management/src/views/TodoApp.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-management/postcss.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-management/src/assets/tailwind.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-management/src/components/LoadingOverlay.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-management/src/layout/MainLayout.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-management/src/views/SignIn.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-management/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/order-management/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-management/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/order-management/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-management/src/components/HelloWorld.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-management/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/order-management/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-management/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/order-management/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/root-config/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/root-config/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/root-config/src/microfrontend-layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/root-config/src/microfrontend-layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-management/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/user-management/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-management/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/user-management/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-management/src/components/HelloWorld.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-management/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/user-management/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-management/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/user-management/vue.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-management/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/user-management/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-management/src/components/ConfirmModal.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-management/src/components/UserInfoModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/order-management/src/components/UserInfoModal.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-management/src/views/TodoApp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/order-management/src/views/TodoApp.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +75,7 @@
       <workItem from="1746492245214" duration="3128000" />
       <workItem from="1746498945826" duration="6406000" />
       <workItem from="1746508906937" duration="17811000" />
+      <workItem from="1746580172337" duration="2627000" />
     </task>
     <servers />
   </component>
@@ -105,7 +87,6 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/user-management/vue.config.js</url>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

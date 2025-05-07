@@ -1,5 +1,6 @@
 <template>
 <MainLayout>
+  <VToast />
   <div class="size-full p-4 flex flex-col gap-2">
     <div class="text-right">
       <VButton label="Add" icon="pi pi-plus" @click="handleShowUser(null, 'create')" />
@@ -39,8 +40,7 @@
                 <div class="flex items-center justify-center gap-4 mt-6">
                   <VButton label="Edit" icon="pi pi-pencil" severity="info" size="small" @click="handleShowUser(user.id, 'edit')" />
                   <VButton label="View" icon="pi pi-eye" severity="info" size="small" @click="handleShowUser(user.id, 'view')" />
-                  <VButton label="Delete" icon="pi pi-trash" severity="danger" size="small" @click="showDialog = true" />
-
+                  <VButton label="Delete" icon="pi pi-trash" severity="danger" size="small" @click="handleConfirmDelete(user.id)" />
                 </div>
               </div>
             </div>
@@ -58,7 +58,8 @@
   </div>
 </MainLayout>
 <LoadingOverlay v-model="showLoading" />
-<UserInfoModal :userId="currentId" :mode="currentMode" v-model="showUserInfo" />
+<ConfirmModal v-model="showConfirm" @ok="handleDelete" />
+<UserInfoModal :userId="currentId" :mode="currentMode" v-model="showUserInfo" @refresh="refreshData" />
 </template>
 
 <script setup>
@@ -69,10 +70,15 @@ import MainLayout from "@/layout/MainLayout.vue";
 import {onMounted, reactive, ref} from "vue";
 import LoadingOverlay from "@/components/LoadingOverlay.vue";
 import UserInfoModal from "@/components/UserInfoModal.vue";
+import ConfirmModal from "@/components/ConfirmModal.vue";
+import {useToast} from "primevue/usetoast";
+
+const toast = useToast();
 
 const itemsData = ref([])
 const showLoading = ref(false)
 const showUserInfo = ref(false)
+const showConfirm = ref(false)
 const currentId = ref(null)
 const currentMode = ref(null)
 
@@ -96,7 +102,6 @@ const getUserList = async () => {
   const data = await response.json()
   pagination.total = data.total
   itemsData.value = data.users
-  console.log(data.users)
   showLoading.value = false
 }
 
@@ -104,6 +109,30 @@ const handleShowUser = (userId, mode) => {
   currentId.value = userId
   currentMode.value = mode
   showUserInfo.value = true
+}
+
+const handleConfirmDelete = (userId) => {
+  currentId.value = userId
+  showConfirm.value = true
+}
+
+const refreshData = () => {
+  pagination.first = 0
+  getUserList()
+}
+
+const handleDelete = async () => {
+  showLoading.value = true
+  const response = await fetch(`https://dummyjson.com/users/${currentId.value}`, {
+    method: 'DELETE',
+  })
+  if (response.status !== 200) {
+    toast.add({ severity:'error', summary: 'Lỗi', detail: 'Xóa người dùng không thành công!', life: 2000 })
+    showLoading.value = false
+    return
+  }
+  toast.add({ severity: 'success', summary: 'Thành công', detail: 'Xóa người dùng thành công!', life: 2000 })
+  refreshData()
 }
 </script>
 
